@@ -1,0 +1,33 @@
+.main{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+    height: 100vh;
+    margin: 0;
+
+}
+
+.sideBar{
+    background-color: lightblue;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    
+}
+.topBanner{
+    border: 2px solid black;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+
+}
+.bannerTop{
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 6fr 1fr 1fr 2fr;
+}
+.bannerBottom{
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+}
