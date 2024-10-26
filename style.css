@@ -160,6 +160,11 @@ TOPBANNER
     color: white;
     border-radius: 19px;
 }
+.topBannerButton:hover{
+    position: relative;
+    /* left: 1px;     */
+    box-shadow: 3px 3px 3px rgba(85, 85, 85, 0.349);
+}
 
 img[src*='othericons']{
     height: 1.5em;    
@@ -178,5 +183,36 @@ input{
 input:focus{
     border: 1px solid black;
 }
+
+
+.mainContent{
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /* background-color: #b42d2d; */
+}
+.mainContent > div{
+    /* margin: 10px 0 0 5px; */
+    background-color: rgb(67, 114, 57);
+    
+}
+.mainCards{
+    grid-area: 1 / 1 / 3 / 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr 1fr;
+    background-color: #4f4794;
+
+}
+
+.mainCards > div{
+    margin: 10px;
+    background-color: #fff;
+}
+.mainCardsHeading{
+    grid-area: 1 / 1 / 2 / 3;
+    background-color: rgb(67, 114, 57) !important;
+}
+
 
 
