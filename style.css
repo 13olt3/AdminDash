@@ -8,18 +8,19 @@
 }
 *{
     font-family: 'ambleregular';
-    /* font-size: 1.25em; */
+
     
     
 }
 body{
-    height: 100vh;
+
     margin: 0;
 }
 .main{
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 5fr;
+    min-height: 100vh;
 }
 .topBanner{
     grid-column: 2 / 3;
@@ -52,7 +53,7 @@ SIDEBAR
     grid-template-rows: repeat(10, 1fr) 10fr;
     /* grid-template-columns: 1fr 4fr; */
     align-items: center;  
-    height: 100vh;
+
 }
 
 img[src*='sidebarIcons']{
@@ -63,7 +64,8 @@ img[src*='sidebarIcons']{
 
 .sideBarGrid > a{
     display: flex;
-    align-items: center;    
+    align-items: center;
+    margin: 10px 0 10px 0;    
 }
 
 a > div{
@@ -184,35 +186,31 @@ input:focus{
     border: 1px solid black;
 }
 
+/* 
+MAIN CONTENT 
+*/
 
 .mainContent{
-    display:grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    /* background-color: #b42d2d; */
+    display: grid;
+    max-height: 100%;
+
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr 5fr;
 }
 .mainContent > div{
-    /* margin: 10px 0 0 5px; */
-    background-color: rgb(67, 114, 57);
-    
+    margin: 5px;
+    background-color: purple;
 }
-.mainCards{
-    grid-area: 1 / 1 / 3 / 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.1fr 1fr 1fr 1fr;
-    background-color: #4f4794;
-
+.projectsHeading{
+    grid-area: 1 / 1 / 2 / 2;
+}
+.projectsContent{
+    grid-area: 2 / 1 / 5 / 2;
 }
 
-.mainCards > div{
-    margin: 10px;
-    background-color: #fff;
-}
-.mainCardsHeading{
-    grid-area: 1 / 1 / 2 / 3;
-    background-color: rgb(67, 114, 57) !important;
-}
+
+
+
 
 
 
