@@ -214,8 +214,9 @@ MAIN CONTENT
     grid-template-rows: 1fr 5fr 1fr 5fr;
     background-color: var(--main-color-100);
     box-shadow: 0px -5px rgba(85, 85, 85, 0.349);
-    padding-bottom: 80px;
+    padding: 0 30px 80px 20px;
 }
+
 .mainContent > div[class$='Content']{
     margin: 5px;
     background-color: var(--main-color-100);
@@ -240,22 +241,35 @@ MAIN CONTENT
     grid-area: 2 / 1 / 5 / 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-
-    padding-left: 20px;
+    gap: 20px;    
     padding-right: 20px;
 
 }
-.cards{
+.trendingContent {
+    display: grid;
+    grid-template-rows: repeat (4, 1fr);;
+}
+
+.cards, .announceContent, .trendingContent{
 
     border: 2px solid black;
     margin-top: 20px;
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 10px 25px 0 25px;
-    font-size: 0.8em;
-    border-left:10px solid blue;
-    
+    box-shadow: 3px 3px rgba(85, 85, 85, 0.349);
+
 }
+
+.cards{        
+    border-left:10px solid blue;
+    box-shadow: 3px 3px rgba(85, 85, 85, 0.349);
+}
+
+.mainContent > div[class$="Content"]{
+    font-size: 0.8em;
+}
+
+
 .cards > p{
     text-align: right;
 }
@@ -266,6 +280,38 @@ MAIN CONTENT
     box-shadow: 3px 7px var(--main-color-300);
     border-left:10px solid var(--main-color-800);
 }
+
+.announceContent > div{
+    
+}
+.contentFirst ~ div{
+    border-top: 2px solid var(--main-color-300);
+    margin-top: 10px;
+    
+}
+.announceContent > div:last-child{
+    margin-bottom: 30px;
+}
+.trendingCard{
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 6fr;
+    column-gap: 20px;
+}
+.trendingCard > a {
+    grid-row: 1 / 3;
+    align-self: center;
+}
+.trendingCard > a + div{
+    font-weight: bold;
+    align-self: end;
+    margin-bottom: 5px;
+}
+.trendingCard > a > img[src$='.svg']{
+    background-color: rgb(187, 68, 68);
+    border-radius: 20px;
+}
+
+
 
 
 
